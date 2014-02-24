@@ -33,8 +33,9 @@ module Spree
       render_menu_tree(@menu, override_id: true, wrapper_el: nil) do |node|
         actions = []
         actions << link_to("+ Add child", new_admin_menu_item_url(menu_id: params[:menu_id], parent_id: node.id))
-        actions << link_to("/ Edit", edit_admin_menu_item_url(node))
-        actions << link_to("x Delete", admin_menu_item_url(node), method: "delete")
+        actions << link_to_edit(node)
+        actions << link_to_delete(node)
+
         r = %(<div class="wrap">#{link_to(node.title, node.href)})
         r << " id = #{node.id}, pos = #{node.position}, ancestry = #{node.ancestry} " if params[:debug]
         r << " - #{node.href}#{' - unpublished' unless node.is_published?}#{' - not visible' unless node.is_visible_in_menu?}"

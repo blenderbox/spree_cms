@@ -65,9 +65,10 @@
             updated = false;
             // and hide our button
             $el.removeClass('on');
-          }, 'json')
+          }, 'json');
         }, 'json');
       });
+
       function checkForUpdates() {
         if (updated) {
           return 'You have unsaved changes.';
@@ -83,6 +84,7 @@
       },
       show_none: false
     });
+
   }
 
   $(init); // on document.ready
