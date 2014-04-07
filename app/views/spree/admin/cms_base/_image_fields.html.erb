@@ -7,5 +7,6 @@
     safe_concat image_tag f.object.file.thumb('120x120').url
   end
 %>
-<%= f.input :file, label: file_label, as: :file %>
+<%= f.input :file, label: file_label, as: :file, required: f.object.new_record? %>
 <%= f.input :retained_file, as: :hidden %>
+
