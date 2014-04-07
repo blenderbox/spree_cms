@@ -1,7 +1,7 @@
 <%= field_set_tag "Slide" do %>
   <% f.object.build_image if f.object.image.nil? %>
   <%= field_set_tag "Image" do %>
-    <%= f.fields_for :image %>
+    <%= f.fields_for :image, required: f.object.new_record? %>
   <% end %>
   <%= f.input :title %>
   <%= f.input :position %>

@@ -12,8 +12,5 @@
     file_label = 'Overwrite'
   end
 %>
-<%= f.input :file, label: file_label, as: :file, required: r.object.new_record? %>
+<%= f.input :file, label: file_label, as: :file %>
 <%= f.input :retained_file, as: :hidden %>
-
-
-test
