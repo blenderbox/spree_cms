@@ -1,6 +1,6 @@
 <article class="slide" style="left: <%= left %>">
   <% unless slide.url.blank? %>
-    <a href="<%= slide.url %>">
+    <a href="<%= slide.url %>" class="slide-link">
   <% end %>
 
   <%= cms_image_tag slide.image, size %>
