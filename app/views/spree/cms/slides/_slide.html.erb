@@ -1,7 +1,15 @@
 <article class="slide" style="left: <%= left %>">
+  <% unless slide.url.blank? %>
+    <a href="<%= slide.url %>">
+  <% end %>
+
   <%= cms_image_tag slide.image, size %>
   <section class="inner">
     <h2><%= slide.title %></h2>
     <%= slide.copy.html_safe %>
   </section>
+
+  <% unless slide.url.blank? %>
+    </a>
+  <% end %>
 </article>
