@@ -7,6 +7,6 @@ class Spree::SlideshowBlock < Spree::Block
 
   accepts_nested_attributes_for :slides, reject_if: :all_blank,
     allow_destroy: true
-  validates_associated :slides
 
+  validates_associated :slides
 end

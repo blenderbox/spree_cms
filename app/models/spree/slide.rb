@@ -12,6 +12,5 @@ class Spree::Slide < ActiveRecord::Base
     allow_destroy: false
   validates_associated :image
 
-  acts_as_list scope: :slideshow_block
 
 end
