@@ -1,7 +1,7 @@
 class Spree::SlideshowBlock < Spree::Block
 
   has_many :slides, class_name: "Spree::Slide",
-    foreign_key: "spree_block_id", dependent: :destroy
+    foreign_key: "spree_block_id", dependent: :destroy, order: :position
 
   attr_accessible :slides_attributes
 
